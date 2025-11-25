@@ -29,9 +29,17 @@ body {
 }
 
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
@@ -40,7 +48,8 @@ body {
 }
 
 /* Decorative background blobs */
-body::before, body::after {
+body::before,
+body::after {
     content: '';
     position: absolute;
     width: 300px;
@@ -67,8 +76,15 @@ body::after {
 }
 
 @keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(30px, -30px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, -30px);
+    }
 }
 
 .card {
@@ -90,6 +106,7 @@ body::after {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -157,4 +174,12 @@ p {
 .icon {
     width: 24px;
     height: 24px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
 }
