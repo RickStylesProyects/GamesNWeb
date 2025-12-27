@@ -4,36 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido</title>
+    <title>GamesN - Portal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Using generic favicon for now, usually needs a link tag -->
 </head>
 
 <body>
     <div class="container">
+        <header class="header">
+            <h1>GamesN Portal</h1>
+        </header>
+
         <div class="cards-grid">
+            <!-- ForsakenAAC Featured Section -->
+            <div class="card featured">
+                <img src="ForsakenAC logo.jpg" alt="ForsakenAAC Logo" class="card-icon">
+                <div class="content">
+                    <h2>ForsakenAAC</h2>
+                    <p>Automatiza los puzzles de Forsaken de manera eficiente y rápida. Optimiza tu tiempo de juego con
+                        nuestra solución automatizada.</p>
+                    <button class="btn btn-primary" onclick="openModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Descargar Programa
+                    </button>
+                </div>
+            </div>
+
+            <!-- Standard Cards -->
             <div class="card">
-                <h1>Reunión</h1>
-                <a href="http://meet.google.com/zth-finf-oxj" class="btn-call" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon">
-                        <path
-                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                        </path>
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                     </svg>
-                    Unirse
+                </div>
+                <h2>Reunión</h2>
+                <a href="http://meet.google.com/zth-finf-oxj" class="btn btn-secondary" target="_blank">
+                    Unirse a Meet
                 </a>
             </div>
 
             <div class="card">
-                <h1>Series y Películas</h1>
-                <a href="https://hyperbeam.com/i/VpHVcDMQ" class="btn-call" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
                         <line x1="7" y1="2" x2="7" y2="22"></line>
                         <line x1="17" y1="2" x2="17" y2="22"></line>
@@ -43,25 +68,80 @@
                         <line x1="17" y1="17" x2="22" y2="17"></line>
                         <line x1="17" y1="7" x2="22" y2="7"></line>
                     </svg>
-                    Ver Ahora
+                </div>
+                <h2>Series y Películas</h2>
+                <a href="https://hyperbeam.com/i/VpHVcDMQ" class="btn btn-secondary" target="_blank">
+                    Ver en Hyperbeam
                 </a>
             </div>
 
             <div class="card">
-                <h1>Archivo de Optimización</h1>
-                <a href="RegEnhancer ver2.Y.reg" class="btn-call" download>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
                     </svg>
-                    Descargar
+                </div>
+                <h2>Optimización</h2>
+                <a href="RegEnhancer ver2.Y.reg" class="btn btn-secondary" download>
+                    Descargar RegEnhancer
                 </a>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="downloadModal" onclick="closeModal(event)">
+        <div class="modal">
+            <button class="close-btn" onclick="closeModal(null, true)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <img src="ForsakenAC logo.jpg" alt="ForsakenAC Logo" class="modal-logo">
+            <h3>Descargar ForsakenAAC</h3>
+            <p>Versión más reciente del instalador. Compatible con Windows 10/11.<br>Tamaño: ~75MB</p>
+            <a href="ForsakenAC_Installer.exe" class="btn btn-primary" download>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Confirmar Descarga
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            const modal = document.getElementById('downloadModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeModal(event, force = false) {
+            // Close if clicking overlay or if forced (close button)
+            if (force || event.target.id === 'downloadModal') {
+                const modal = document.getElementById('downloadModal');
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close using Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeModal(null, true);
+            }
+        });
+    </script>
 </body>
 
 </html>
