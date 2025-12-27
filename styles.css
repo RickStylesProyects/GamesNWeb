@@ -1,13 +1,20 @@
 :root {
-    --primary: #6366f1; /* Indigo 500 */
-    --primary-dark: #4338ca; /* Indigo 700 */
-    --secondary: #8b5cf6; /* Violet 500 */
-    --accent: #a855f7; /* Purple 500 */
-    --background: #0f172a; /* Slate 900 */
+    --primary: #6366f1;
+    /* Indigo 500 */
+    --primary-dark: #4338ca;
+    /* Indigo 700 */
+    --secondary: #8b5cf6;
+    /* Violet 500 */
+    --accent: #a855f7;
+    /* Purple 500 */
+    --background: #0f172a;
+    /* Slate 900 */
     --surface: rgba(255, 255, 255, 0.05);
     --surface-hover: rgba(255, 255, 255, 0.1);
-    --text: #f8fafc; /* Slate 50 */
-    --text-muted: #94a3b8; /* Slate 400 */
+    --text: #f8fafc;
+    /* Slate 50 */
+    --text-muted: #94a3b8;
+    /* Slate 400 */
     --glass-border: rgba(255, 255, 255, 0.1);
 }
 
@@ -26,7 +33,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
-    background-image: 
+    background-image:
         radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 20%),
         radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 20%);
 }
@@ -103,6 +110,8 @@ body {
     margin-bottom: 1.5rem;
     color: var(--primary);
     filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.3));
+    max-width: 100%;
+    height: auto;
 }
 
 /* Buttons */
@@ -178,7 +187,8 @@ body {
 .card.featured .card-icon {
     width: 200px;
     height: 200px;
-    object-fit: contain; /* or cover depending on the image */
+    object-fit: contain;
+    /* or cover depending on the image */
     border-radius: 1rem;
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
     margin: 0;
@@ -265,9 +275,17 @@ body {
 
 /* Animations */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* Responsive adjustments for featured card */
@@ -277,7 +295,7 @@ body {
         text-align: center;
         padding: 2rem;
     }
-    
+
     .card.featured .content {
         text-align: center;
     }
