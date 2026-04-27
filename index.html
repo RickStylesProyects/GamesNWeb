@@ -4,18 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GamesN - Portal</title>
+    <title>Michis Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Using generic favicon for now, usually needs a link tag -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
 </head>
 
 <body>
+    <!-- Floating paw prints background -->
+    <div class="paw-prints" aria-hidden="true">
+        <span class="paw paw-1">🐾</span>
+        <span class="paw paw-2">🐾</span>
+        <span class="paw paw-3">🐾</span>
+        <span class="paw paw-4">🐾</span>
+        <span class="paw paw-5">🐾</span>
+        <span class="paw paw-6">🐾</span>
+        <span class="paw paw-7">🐾</span>
+        <span class="paw paw-8">🐾</span>
+    </div>
+
     <div class="container">
         <header class="header">
-            <h1>GamesN Portal</h1>
+            <div class="cat-face">
+                <div class="cat-ear cat-ear-left"></div>
+                <div class="cat-ear cat-ear-right"></div>
+                <div class="cat-eye cat-eye-left"></div>
+                <div class="cat-eye cat-eye-right"></div>
+                <div class="cat-nose"></div>
+                <div class="cat-whisker cat-whisker-left-top"></div>
+                <div class="cat-whisker cat-whisker-left-bottom"></div>
+                <div class="cat-whisker cat-whisker-right-top"></div>
+                <div class="cat-whisker cat-whisker-right-bottom"></div>
+            </div>
+            <h1>Michis Web</h1>
         </header>
 
         <div class="cards-grid">
@@ -77,7 +101,8 @@
 
             <div class="card">
                 <div class="card-icon" style="display: flex; justify-content: center;">
-                    <img src="RSOptimizer_Icono.png" alt="RS Optimizer Logo" width="64" height="64" style="object-fit: contain; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5)); border-radius: 20%;">
+                    <img src="RSOptimizer_Icono.png" alt="RS Optimizer Logo" width="64" height="64"
+                        style="object-fit: contain; filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5)); border-radius: 20%;">
                 </div>
                 <h2>RS Optimizer</h2>
                 <a href="RS Optimizer.exe" class="btn btn-secondary" download>
@@ -116,11 +141,10 @@
         function openModal() {
             const modal = document.getElementById('downloadModal');
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal(event, force = false) {
-            // Close if clicking overlay or if forced (close button)
             if (force || event.target.id === 'downloadModal') {
                 const modal = document.getElementById('downloadModal');
                 modal.classList.remove('active');
@@ -128,7 +152,6 @@
             }
         }
 
-        // Close using Escape key
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
                 closeModal(null, true);
